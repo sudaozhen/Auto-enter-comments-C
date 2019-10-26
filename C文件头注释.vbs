@@ -1,29 +1,25 @@
 Set WshShell=WScript.CreateObject("WScript.Shell")
-
-If  Msgbox("«Î«–ªª≥…”¢Œƒ ‰»Î∑®£°"& Chr(10) & "µ•ª˜[»∑∂®]∫Û,Ω´π‚±Í∂®ŒªµΩ≤Â»ÎŒª÷√¥¶°£" & Chr(10) & "µ•ª˜[»°œ˚]ÕÀ≥ˆ",65,"CŒƒº˛Õ∑◊¢ Õ") = 1 Then
-
+If  Msgbox("ËØ∑ÂàáÊç¢ÊàêËã±ÊñáËæìÂÖ•Ê≥ïÔºÅ"& Chr(10) & "ÂçïÂáª[Á°ÆÂÆö]Âêé,Â∞ÜÂÖâÊ†áÂÆö‰ΩçÂà∞ÊèíÂÖ•‰ΩçÁΩÆÂ§Ñ„ÄÇ" & Chr(10) & "ÂçïÂáª[ÂèñÊ∂à]ÈÄÄÂá∫",65,"CÊñá‰ª∂Â§¥Ê≥®Èáä") = 1 Then
     Dim d
     d = Date()
-
     Dim author
     author = "Su DaoZhen"
 
-
     WScript.Sleep 3000
-    WshShell.SendKeys "/**" & "{ENTER}"
-    WshShell.SendKeys "  ******************************************************************************" & "{ENTER}"
-    WshShell.SendKeys "  * @file  " & "{ENTER}"
-    WshShell.SendKeys "  * @author  " & author & "{ENTER}"
-    WshShell.SendKeys "  * @version  V1.0.0 " & "{ENTER}"
-    WshShell.SendKeys "  * @date  " & date & "{ENTER}"
-    WshShell.SendKeys "  * @brief  " & "{ENTER}"
-    WshShell.SendKeys "  ******************************************************************************" & "{ENTER}"
-    WshShell.SendKeys "  * @attention" & "{ENTER}" 
-    WshShell.SendKeys "  * " & "{ENTER}"
-    WshShell.SendKeys "  * " & "{(}" & "C" & "{)}" & "COPYRIGHT "  & author & "{ENTER}"
-    WshShell.SendKeys "  ******************************************************************************" & "{ENTER}"
-    WshShell.SendKeys "*/" & "{ENTER}"
-    WshShell.SendKeys "{ENTER}" & "{ENTER}" & "{ENTER}" & "{ENTER}" & "{ENTER}"
+    WshShell.SendKeys "/**" & "{ENTER}" & "{HOME}"
+    WshShell.SendKeys "******************************************************************************" & "+{ENTER}" & "{HOME}"
+    WshShell.SendKeys "* @file     " & "{ENTER}" & "{HOME}"
+    WshShell.SendKeys "* @author   " & author & "{ENTER}" & "{HOME}"
+    WshShell.SendKeys "* @version  V1.0.0 " & "{ENTER}" & "{HOME}"
+    WshShell.SendKeys "* @date     " & date & "{ENTER}" & "{HOME}"
+    WshShell.SendKeys "* @brief    " & "{ENTER}"  & "{HOME}"
+    WshShell.SendKeys "******************************************************************************" & "+{ENTER}"  & "{HOME}"
+    WshShell.SendKeys "* @attention" & "{ENTER}"  & "{HOME}"
+    WshShell.SendKeys "* " & "{ENTER}" & "{HOME}"
+    WshShell.SendKeys "* " & "{(}" & "C" & "{)}" & "COPYRIGHT "  & author & "{ENTER}" & "{HOME}"
+    WshShell.SendKeys "******************************************************************************" & "{ENTER}" & "{HOME}"
+    WshShell.SendKeys "*/" & "{ENTER}" & "{HOME}"
+    WshShell.SendKeys "{ENTER}" & "{ENTER}" & "{ENTER}" & "{ENTER}" & "{ENTER}" & "{HOME}"
     WshShell.SendKeys "/*******************" & "{(}" & "C" & "{)}" & " COPYRIGHT " & author & " *********END OF FILE*********/"
     WshShell.SendKeys "{ENTER}"
 End If
